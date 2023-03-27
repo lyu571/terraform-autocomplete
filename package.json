@@ -1,13 +1,10 @@
 {
-    "name": "terraform-autocomplete",
-    "displayName": "Terraform Autocomplete",
-    "description": "Autocomplete for AWS resources with terraform.",
-    "version": "0.0.8",
-    "publisher": "erd0s",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/erd0s/terraform-autocomplete"
-    },
+    "name": "tiat-terraform-autocomplete",
+    "displayName": "Terraform Autocomplete for Tencent Cloud",
+    "description": "Autocomplete for Tencnet Cloud resources with terraform.",
+    "version": "0.0.3",
+    "license": "MIT",
+    "publisher": "nickyinluo",
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -54,7 +51,7 @@
         "@types/node": "^6.0.40",
         "mocha": "^2.3.3",
         "typescript": "^2.0.3",
-        "vscode": "^1.1.5"
+        "vscode": "^1.1.37"
     },
     "dependencies": {
         "@types/opn": "^3.0.28",

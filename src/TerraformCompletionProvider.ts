@@ -1,5 +1,5 @@
 import { CompletionItemProvider, TextDocument, Position, CancellationToken, CompletionItem, CompletionItemKind } from "vscode";
-var resources = require('../../aws-resources.json');
+var resources = require('../../tiat-resources.json');
 import * as _ from "lodash";
 
 var topLevelTypes = ["output", "provider", "resource", "variable", "data"];
@@ -85,7 +85,8 @@ export class TerraformCompletionProvider implements CompletionItemProvider {
             let parentType = this.getParentType(line);
             if (parentType && parentType.type == "resource") {
                 let resourceType = this.getResourceTypeFromLine(line);
-                return this.getItemsForArgs(resources[resourceType].args, resourceType);                
+                let ret = this.getItemsForArgs(resources[resourceType].args, resourceType);
+                return ret;            
             } 
             else if (parentType && parentType.type != "resource") {
                 // We don't want to accidentally include some other containers stuff
